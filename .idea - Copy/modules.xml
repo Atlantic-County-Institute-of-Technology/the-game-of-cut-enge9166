@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/the-game-of-cut-enge9166.iml" filepath="$PROJECT_DIR$/the-game-of-cut-enge9166.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/the-game-of-cut-enge9166.iml" filepath="$PROJECT_DIR$/.idea/the-game-of-cut-enge9166.iml" />
     </modules>
   </component>
 </project>

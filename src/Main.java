@@ -5,7 +5,7 @@ public class Main {
 
         // Create a new deck object
         Deck deck1 = new Deck();
-        deck1.shuffle();
-        deck1.toString();
+//        deck1.shuffle();
+        System.out.println(deck1.toString());
     }
 }
