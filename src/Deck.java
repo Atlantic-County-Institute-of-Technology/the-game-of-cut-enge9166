@@ -10,7 +10,7 @@ public class Deck {
         genDeck();
     }
 
-    private void genDeck() {
+    public void genDeck() {
         int temp = 0;
         for (int suit = 1; suit <= 4; suit++) {
             for (int face = 1; face <= 13; face++) {
@@ -21,10 +21,10 @@ public class Deck {
         cardsInDeck = 52;
     }
 
-    private void shuffle() {
+    public void shuffle() {
 
         for (int i = 0; i < 52; i++) {
-            int temp = deck[i];
+            Card temp = deck[i];
             int temp2 = rand.nextInt(deck.length);
             deck[i] = deck[temp2];
             deck[temp2] = temp;
@@ -32,36 +32,17 @@ public class Deck {
         cardsInDeck = 52;
     }
 
-    private void toString(){
+    // Corrected toString method
+    public String toString(){
+        // Use a StringBuilder to efficiently build the string representation
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < deck.length; i++) {
-            deck[i].toString();
+            // Append the string representation of each card to the StringBuilder
+            // Assumes the Card class has a working toString() method
+            sb.append(deck[i].toString());
+            sb.append("\n"); // Add a newline for better readability
         }
-
-
-    }
-
-    // Pulls a random card from the remaining cards in the deck
-//    public Card pullCard() {
-//        if (cardsInDeck > 0) {
-//            // Select a random index from the *remaining* available cards
-//            int randomIndex = rand.nextInt(cardsInDeck);
-//
-//            // Get the card at that random index
-//            Card selectedCard = deck[randomIndex];
-//
-//            // Swap the selected card with the last available card to fill the gap
-//            // This ensures we don't pick the same card twice
-//            deck[randomIndex] = deck[cardsInDeck - 1];
-//            deck[cardsInDeck - 1] = null; // Optional: helps with garbage collection/debugging
-//
-//            // Decrease the count of available cards
-//            cardsInDeck--;
-//
-//            return selectedCard;
-//
-//        } else {
-//            System.out.println("The deck is empty!");
-//            return null;
-        }
+        // Return the final string
+        return sb.toString();
     }
 }
