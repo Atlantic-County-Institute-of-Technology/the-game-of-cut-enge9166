@@ -19,11 +19,19 @@ public class Card {
         this.suit = suit;
     }
 
-    public String getFace() {
+    public int getFace() {
+        return face;
+    }
+
+    public int getSuit() {
+        return suit;
+    }
+
+    public String getFaceName() {
         return faces[face];
     }
 
-    public String getSuit() {
+    public String getSuitName() {
         return suits[suit];
     }
 

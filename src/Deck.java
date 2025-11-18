@@ -45,4 +45,9 @@ public class Deck {
         // Return the final string
         return sb.toString();
     }
+
+    public Card getCard(int cardNumber) {
+        return deck[cardNumber];
+    }
+
 }
